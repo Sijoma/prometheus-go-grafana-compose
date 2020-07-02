@@ -1,0 +1,10 @@
+  
+apiVersion: 1
+providers:
+- name: Go-Client
+  folder: ''
+  type: file
+  disableDeletion: false
+  editable: false 
+  options:
+    path: /etc/grafana/provisioning/dashboards

@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 5s
+  external_labels:
+    monitor: 'my_own_prometheus_go_test'
+rule_files:
+  - 'alert.rules/*.yml'
+scrape_configs:
+  - job_name: 'prometheus' 
+    static_configs: 
+      - targets: [prometheus:9090] 
+  - job_name: 'go-scrape-client' 
+    static_configs: 
+      - targets: ['go-client:9200']

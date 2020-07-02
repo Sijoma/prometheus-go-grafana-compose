@@ -1,0 +1,9 @@
+groups:
+- name: High Traffic
+  rules:
+  - alert: HighRequestLatency
+    expr: my_own_http_requests_total > 2000000
+    labels:
+      severity: page
+    annotations:
+      summary: More than 20 requests made!!!! 
